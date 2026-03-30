@@ -1,18 +1,50 @@
-# React + Vite
+RUN INSTRUCTIONS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Prerequisites
+- Node.js (LTS recommended, v18+). Verify with: node -v
+- npm (comes with Node). Verify with: npm -v
 
-Currently, two official plugins are available:
+Install dependencies
+1. Open a terminal in the project root (where package.json is).
+2. Run:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+   npm install
 
-## React Compiler
+Run development server
+- Start dev server:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+  npm run dev
 
-## Expanding the ESLint configuration
+- Open in browser: http://localhost:5173/
+- To expose on LAN: npm run dev -- --host
+- To change port: npm run dev -- --port 3000
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# AVIOR-Aircraft-Comparison
-# AVIOR-Aircraft-Comparison
+Build & preview
+- Build production bundle:
+
+  npm run build
+
+- Preview production build locally:
+
+  npm run preview
+
+Linting
+- Run ESLint:
+
+  npm run lint
+
+Troubleshooting
+- If a dependency fails to install, delete node_modules and package-lock.json then re-run `npm install`.
+- If port 5173 is in use, run dev with a different port: `npm run dev -- --port 3001`.
+- To fix audit issues: `npm audit fix` (review before applying major changes).
+- On Windows PowerShell, run commands from the project folder and ensure you have permission to install global packages if needed.
+
+Project structure notes
+- Source: src/
+- Static assets: public/
+- Scripts and utilities: JS/
+- Data patches: DATA/
+
+Other
+- To build for deployment, run `npm run build` and deploy the contents of the `dist/` folder produced by Vite.
+- If you want me to open the site in your browser or create a README.md variant, tell me which you prefer.
